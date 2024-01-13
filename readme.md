@@ -7,7 +7,7 @@ This technique is commonly used in various applications such as facial recogniti
 
 ## How to create face bank
 
-We will create a face bank folder containing people whose names are spoken by the device. The reason for this naming is that the neural network and mlp are not supposed to be trained with it, we only extract the features of each person's face.
+We will create a face bank folder containing people whose faces you want to identify faces in. The reason for this naming is that the neural network and mlp are not supposed to be trained with it, we only extract the features of each person's face. 
 
 ```
 jupyter nbconvert --to python create_face_bank.ipynb
@@ -25,6 +25,20 @@ pip install -r requirements.txt
 ```
 jupyter nbconvert --to python face_identification.ipynb
 ```
+Or do you want to use the Python file, the method is as follows:
+
+To use the code you replicated, you need to run it using a Python interpreter. You can do this by opening a terminal/command prompt and navigating to the directory where the code is saved. Then, you can run the code using the following command:
+‍
+‍‍‍‍```
+python face_identification.py --image <path_to_input_image> [--update <path_to_directory_with_new_images>]```
+Replace <path_to_input_image> with the path to the input image you want to identify faces in. If you have new images to update the face bank, add the --update flag followed by the path to the directory with the new images.
+
+For example, if your input image is located in the same directory as the code and is called input_image.jpg, you can run the code with the following command:
+```python face_identification.py --image input_image.jpg```
+If you have new images to update the face bank and they are located in a directory called new_images in the same directory as the code, you can run the code with the following command:
+```python face_identification.py --image input_image.jpg --update new_images ```
+
+
 
 ### results
 
