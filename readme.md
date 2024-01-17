@@ -12,7 +12,21 @@ We will create a face bank folder containing people whose faces you want to iden
 ```
 jupyter nbconvert --to python create_face_bank.ipynb
 ```
+Another step-by-step implementation method is as follows:
 
+### create an instance of the CreateFaceBank class
+```face_bank_creator = CreateFaceBank()```
+
+### load the face detection and embedding model
+```face_bank_creator.load_model()```
+
+### set the path to the directory containing face images
+```face_bank_creator.face_bank_path = '/path/to/face/images'```
+
+### extract embeddings for each image and save them to a file
+```face_bank_creator.facebank()```
+
+---
 
 ## How to install
 
